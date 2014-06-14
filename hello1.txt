@@ -1,0 +1,25 @@
+*** Settings ***
+Library    			Selenium2Library
+Suite Teardown		Close Browser
+
+*** Variables ***
+
+
+*** Testcases ***
+Search from google
+	ค้นหา			robot
+	เจอคำว่า			robot
+   
+
+
+*** Keywords ***
+ค้นหา			robot
+	Open Browser    http://www.google.co.th
+
+    Input Text    	gbqfq   robot
+    Click Button    gbqfb
+    
+
+    
+ค้นหา			robot
+	Wait Until Page Contains   robot
